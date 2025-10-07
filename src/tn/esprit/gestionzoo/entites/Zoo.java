@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.entites;
+
 public class Zoo {
     private Animal[] animals;
     private String name;
@@ -18,12 +20,12 @@ public class Zoo {
     }
 
     public void displayZoo() {
-        System.out.println("Zoo : " + name + ", Ville : " + city + ", Cages : " + nbrCages);
+        System.out.println("tn.esprit.gestionzoo.entites.Zoo : " + name + ", Ville : " + city + ", Cages : " + nbrCages);
     }
 
     @Override
     public String toString() {
-        return "Zoo [Nom=" + name + ", Ville=" + city + ", Cages=" + nbrCages + "]";
+        return "tn.esprit.gestionzoo.entites.Zoo [Nom=" + name + ", Ville=" + city + ", Cages=" + nbrCages + "]";
     }
 
     public boolean addAnimal(Animal animal) {
@@ -59,7 +61,7 @@ public class Zoo {
     public boolean removeAnimal(Animal animal) {
         int index = searchAnimal(animal);
         if (index == -1) {
-            System.out.println("Animal introuvable.");
+            System.out.println("tn.esprit.gestionzoo.entites.Animal introuvable.");
             return false;
         }
         for (int i = index; i < animalCount - 1; i++) {

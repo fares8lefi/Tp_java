@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.entites;
+
 public class Animal {
     String family;
     String name;
@@ -48,7 +50,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal [Famille=" + family + ", Nom=" + name + ", Âge=" + age + ", Mammifère=" + isMammal + "]";
+        return "tn.esprit.gestionzoo.entites.Animal [Famille=" + family + ", Nom=" + name + ", Âge=" + age + ", Mammifère=" + isMammal + "]";
     }
 
 }
