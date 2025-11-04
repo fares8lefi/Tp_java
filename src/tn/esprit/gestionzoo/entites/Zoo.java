@@ -1,5 +1,8 @@
 package tn.esprit.gestionzoo.entities;
 
+import tn.esprit.gestionzoo.exceptions.InvalidAgeException;
+import tn.esprit.gestionzoo.exceptions.ZooFullException;
+
 public class Zoo {
     final int NBR_CAGES = 25;   // constante
     Animal[] animals;
@@ -18,6 +21,12 @@ public class Zoo {
     public void displayZoo() {
         System.out.println("tn.esprit.gestionzoo.entities.Zoo : " + name + ", Ville : " + city + ", Cages : " + NBR_CAGES);
     }
+
+    public void addAnimal(Animal animal) throws ZooFullException, InvalidAgeException {
+        // Vérification de l’âge
+        if (animal.getAge() < 0) {
+            throw new InvalidAgeException("Âge d’animal invalide : l’âge ne peut pas être négatif.");
+        }
     @Override
     public String toString() {
         return "tn.esprit.gestionzoo.entities.Zoo [Nom=" + name + ", Ville=" + city + ", Cages=" + NBR_CAGES + "]";
@@ -44,7 +53,11 @@ public class Zoo {
             System.out.println(animals[i]);
         }
     }
-
+    public void addAnimal(Animal animal) throws ZooFullException, InvalidAgeException {
+        // Vérification de l’âge
+        if (animal.getAge() < 0) {
+            throw new InvalidAgeException("Âge d’animal invalide : l’âge ne peut pas être négatif.");
+        }
     // ✅ Instruction 11 : Recherche d’un animal par nom
     public int searchAnimal(Animal animal) {
         for (int i = 0; i < animalCount; i++) {
